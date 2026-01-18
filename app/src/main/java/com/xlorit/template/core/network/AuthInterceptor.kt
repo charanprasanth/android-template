@@ -1,7 +1,7 @@
 package com.xlorit.template.core.network
 
 import com.xlorit.template.core.datastore.UserPreferences
-import jakarta.inject.Inject
+import javax.inject.Inject
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import okhttp3.Interceptor

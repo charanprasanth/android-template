@@ -9,13 +9,13 @@ import com.xlorit.template.feature.auth.presentation.state.LoginEffect
 import com.xlorit.template.feature.auth.presentation.state.LoginEvent
 import com.xlorit.template.feature.auth.presentation.state.LoginState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import jakarta.inject.Inject
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(

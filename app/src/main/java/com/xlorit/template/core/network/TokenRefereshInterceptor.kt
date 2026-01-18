@@ -2,15 +2,16 @@ package com.xlorit.template.core.network
 
 import com.xlorit.template.core.datastore.UserPreferences
 import com.xlorit.template.feature.auth.data.remote.AuthApi
+import com.xlorit.template.feature.auth.data.remote.RefreshApi
 import com.xlorit.template.feature.auth.data.remote.dto.RefreshRequest
-import jakarta.inject.Inject
+import javax.inject.Inject
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import okhttp3.Interceptor
 import okhttp3.Response
 
 class TokenRefreshInterceptor @Inject constructor(
-    private val authApi: AuthApi,
+    private val refreshApi: RefreshApi,
     private val prefs: UserPreferences
 ) : Interceptor {
 
@@ -26,7 +27,7 @@ class TokenRefreshInterceptor @Inject constructor(
         } ?: return response
 
         val refreshResponse = runBlocking {
-            authApi.refresh(
+            refreshApi.refresh(
                 RefreshRequest(refreshToken)
             )
         }

@@ -8,7 +8,7 @@ import com.xlorit.template.core.result.Result
 import com.xlorit.template.feature.auth.data.remote.AuthApi
 import com.xlorit.template.feature.auth.data.remote.dto.LoginRequest
 import com.xlorit.template.feature.auth.domain.repository.AuthRepository
-import jakarta.inject.Inject
+import javax.inject.Inject
 
 class AuthRepositoryImpl @Inject constructor(
     private val api: AuthApi,
